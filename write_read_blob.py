@@ -9,7 +9,7 @@ def write_blob(id, path_to_file,img_name, img_type ):
         # read data from a picture
         img = open(path_to_file, 'rb').read()
         # connect to the PostgresQL database
-        conn = psycopg2.connect(host="localhost",database="postgres", user="denishpatel", password="postgres")
+        conn = psycopg2.connect(host="localhost",database="postgres", user="postgres", password="postgres")
         # create a new cursor object
         cur = conn.cursor()
         # execute the INSERT statement
@@ -31,7 +31,7 @@ def read_blob(id, path_to_dir):
     conn = None
     try:
         # connect to the PostgresQL database
-        conn = psycopg2.connect(host="localhost",database="postgres", user="denishpatel", password="postgres")
+        conn = psycopg2.connect(host="localhost",database="postgres", user="postgres", password="postgres")
         # create a new cursor object
         cur = conn.cursor()
         # execute the SELECT statement
